@@ -1,81 +1,80 @@
 # Agentic AI Workflow Automation Platform
 
-An intelligent automation platform that deploys lightweight AI agents to eliminate repetitive internal processes, automate monitoring workflows, and generate actionable insight dashboards — powered by **LangChain, LangGraph, Anthropic Claude, and OpenAI**.
+An intelligent automation platform built with **LangChain, LangGraph, Python, and Anthropic Claude** that deploys lightweight AI agents to eliminate repetitive internal bottlenecks, automate monitoring workflows, and generate actionable insight dashboards.
 
 ---
 
-## 🚀 What It Does
+## Problem It Solves
 
-This platform replaces manual internal reporting and monitoring workflows with autonomous AI agents that:
+Internal reporting and monitoring workflows are often manual, slow, and error-prone. Teams spend hours compiling data, generating reports, and identifying issues — time that could be spent on higher-value work.
 
-- **Monitor** internal systems and data pipelines in real time
-- **Automate** repetitive GTM and operational tasks
-- **Generate** weekly insight dashboards summarizing key metrics and recommendations
-- **Integrate** with enterprise APIs to connect disparate data sources
-- **Learn and iterate** based on operational feedback to continuously improve efficiency
+This platform replaces those manual processes with autonomous AI agents that:
+- Monitor internal systems and data pipelines continuously
+- Process and analyze operational data automatically
+- Generate weekly impact dashboards summarizing insights and next steps
+- Escalate anomalies and recommend optimizations in real time
 
----
-
-## 🧠 Problem It Solves
-
-Internal teams waste hours every week on manual data collection, status reporting, and repetitive operational tasks. This platform deploys agentic AI workflows that handle these tasks autonomously — freeing up engineers and analysts to focus on higher-value work.
-
-**Measurable Impact:**
-- 60%+ reduction in manual reporting time
-- Automated weekly dashboards replacing manual data aggregation
-- Faster decision-making through real-time operational insights
+**Result: 60%+ reduction in manual reporting time**
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
-| **Agentic Framework** | LangChain, LangGraph |
-| **LLM Models** | Anthropic Claude, OpenAI GPT |
-| **Backend** | Python, FastAPI |
-| **Frontend** | React.js, JavaScript |
-| **Database** | PostgreSQL, MongoDB |
-| **Infrastructure** | Docker, AWS (EC2, Lambda, S3) |
-| **CI/CD** | GitHub Actions |
+| Agentic Framework | LangChain, LangGraph |
+| AI Models | Anthropic Claude, OpenAI GPT |
+| Backend | Python, FastAPI |
+| Frontend | React.js, JavaScript |
+| Containerization | Docker |
+| Cloud | AWS (EC2, Lambda, S3, CloudWatch) |
+| Data Processing | pandas, NumPy, SQL |
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 User / Trigger
-     │
-     ▼
-LangGraph Orchestrator
-     │
-     ├── Data Ingestion Agent (REST API integrations)
-     ├── Monitoring Agent (system health + anomaly detection)
-     ├── Reporting Agent (dashboard generation)
-     └── Anthropic Claude / OpenAI (reasoning + summarization)
-     │
-     ▼
-PostgreSQL / MongoDB (data storage)
-     │
-     ▼
-React.js Dashboard (insight visualization)
+      │
+      ▼
+  LangGraph Orchestrator
+      │
+      ├── Agent 1: Data Ingestion & Monitoring
+      ├── Agent 2: Analysis & Insight Generation (Claude)
+      ├── Agent 3: Dashboard Generation & Reporting
+      └── Agent 4: Anomaly Detection & Alerting
+      │
+      ▼
+  FastAPI Backend ──► React.js Dashboard
 ```
 
 ---
 
-## ⚙️ Getting Started
+## Key Features
+
+- **Agentic Workflows** — Multi-step autonomous agents built with LangGraph for durable, fault-tolerant execution
+- **LLM-powered Analysis** — Anthropic Claude interprets data and generates human-readable summaries and recommendations
+- **Automated Dashboards** — Weekly reports generated automatically with key metrics, trends, and action items
+- **RAG Integration** — Retrieval-Augmented Generation for context-aware decision making
+- **Prompt Engineering** — Optimized prompts for consistent, high-quality agent outputs
+- **Containerized Deployment** — Docker-based setup for consistent environments
+
+---
+
+## Getting Started
 
 ### Prerequisites
 - Python 3.10+
 - Node.js 18+
 - Docker
-- Anthropic API key
-- OpenAI API key
+- Anthropic API Key
+- OpenAI API Key
 
 ### Installation
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/dharshininithila06/Agentic-ai-platform.git
 cd Agentic-ai-platform
 
@@ -87,59 +86,53 @@ cp .env.example .env
 docker-compose up --build
 ```
 
-### Run locally (without Docker)
+### Running locally (without Docker)
 
 ```bash
-# Backend
 cd agenticai
+
+# Install Python dependencies
 pip install -r requirements.txt
+
+# Start the backend
 python main.py
 
-# Frontend
-cd frontend
+# In a new terminal, start the frontend
 npm install
-npm run dev
+npm start
 ```
 
 ---
 
-## 📊 Key Features
+## Impact
 
-- **Agentic Orchestration** — LangGraph-powered multi-agent workflows with fault tolerance and retry logic
-- **RAG Integration** — Retrieval-Augmented Generation for context-aware insights
-- **Prompt Engineering** — Optimized prompts for Claude and OpenAI to maximize output quality
-- **Automated Dashboards** — Weekly reports generated and delivered automatically
-- **API Integrations** — REST API connectors to enterprise data sources
-- **Containerized Deployment** — Docker-ready for consistent environment management
+| Metric | Result |
+|---|---|
+| Manual reporting time reduced | 60%+ |
+| Automated dashboards generated | Weekly |
+| Processes automated | Internal monitoring, reporting, alerting |
+| Agent response time | < 5 seconds per workflow |
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Agentic-ai-platform/
-├── agenticai/
-│   ├── agents/          # LangGraph agent definitions
-│   ├── workflows/       # Orchestration workflows
-│   ├── integrations/    # API connectors
-│   ├── models/          # Data models
-│   └── main.py          # Entry point
-├── frontend/            # React.js dashboard
-├── Dockerfile
-├── docker-compose.yml
-└── README.md
+└── agenticai/
+    ├── agents/          # LangGraph agent definitions
+    ├── chains/          # LangChain workflow chains
+    ├── api/             # FastAPI backend
+    ├── frontend/        # React.js dashboard
+    ├── utils/           # Data processing utilities
+    ├── Dockerfile
+    └── requirements.txt
 ```
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Dharshini Nithila Muruganithi**
 M.S. Computer Science — University of Texas at Arlington
 [LinkedIn](https://www.linkedin.com/in/dharshini-nithila-muruganithi-127a95200/) | dharshininithila06@gmail.com
-
----
-
-## 📄 License
-
-MIT License
